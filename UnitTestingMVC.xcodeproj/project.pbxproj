@@ -16,6 +16,10 @@
 		D481153824A7172800F07ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D481153624A7172800F07ED1 /* LaunchScreen.storyboard */; };
 		D481154324A7172800F07ED1 /* UnitTestingMVCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481154224A7172800F07ED1 /* UnitTestingMVCTests.swift */; };
 		D481154E24A7172800F07ED1 /* UnitTestingMVCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481154D24A7172800F07ED1 /* UnitTestingMVCUITests.swift */; };
+		D481156024A7190100F07ED1 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481155F24A7190100F07ED1 /* NetworkingManager.swift */; };
+		D481156224A71BCD00F07ED1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481156124A71BCD00F07ED1 /* CategoryViewController.swift */; };
+		D481156324A71DF600F07ED1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481156124A71BCD00F07ED1 /* CategoryViewController.swift */; };
+		D481156424A71E8400F07ED1 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481155F24A7190100F07ED1 /* NetworkingManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,8 @@
 		D481154924A7172800F07ED1 /* UnitTestingMVCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTestingMVCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D481154D24A7172800F07ED1 /* UnitTestingMVCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingMVCUITests.swift; sourceTree = "<group>"; };
 		D481154F24A7172800F07ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D481155F24A7190100F07ED1 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		D481156124A71BCD00F07ED1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +107,9 @@
 		D481152724A7172700F07ED1 /* UnitTestingMVC */ = {
 			isa = PBXGroup;
 			children = (
+				D481155E24A718ED00F07ED1 /* Common */,
+				D481155D24A718DD00F07ED1 /* Networking */,
+				D481155B24A717F500F07ED1 /* Modules */,
 				D481152824A7172700F07ED1 /* AppDelegate.swift */,
 				D481152A24A7172700F07ED1 /* SceneDelegate.swift */,
 				D481152C24A7172700F07ED1 /* ViewController.swift */,
@@ -129,6 +138,37 @@
 				D481154F24A7172800F07ED1 /* Info.plist */,
 			);
 			path = UnitTestingMVCUITests;
+			sourceTree = "<group>";
+		};
+		D481155B24A717F500F07ED1 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				D481155C24A7180400F07ED1 /* Category */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		D481155C24A7180400F07ED1 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				D481156124A71BCD00F07ED1 /* CategoryViewController.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		D481155D24A718DD00F07ED1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				D481155F24A7190100F07ED1 /* NetworkingManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		D481155E24A718ED00F07ED1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +305,8 @@
 				D481152D24A7172700F07ED1 /* ViewController.swift in Sources */,
 				D481152924A7172700F07ED1 /* AppDelegate.swift in Sources */,
 				D481152B24A7172700F07ED1 /* SceneDelegate.swift in Sources */,
+				D481156024A7190100F07ED1 /* NetworkingManager.swift in Sources */,
+				D481156224A71BCD00F07ED1 /* CategoryViewController.swift in Sources */,
 				D481153324A7172700F07ED1 /* UnitTestingMVC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +315,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D481156424A71E8400F07ED1 /* NetworkingManager.swift in Sources */,
+				D481156324A71DF600F07ED1 /* CategoryViewController.swift in Sources */,
 				D481154324A7172800F07ED1 /* UnitTestingMVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

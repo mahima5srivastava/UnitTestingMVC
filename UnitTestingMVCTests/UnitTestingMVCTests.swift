@@ -10,9 +10,10 @@ import XCTest
 @testable import UnitTestingMVC
 
 class UnitTestingMVCTests: XCTestCase {
-
+    var categoryViewController: CategoryViewController?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+      categoryViewController = CategoryViewController()
     }
 
     override func tearDownWithError() throws {
@@ -29,6 +30,12 @@ class UnitTestingMVCTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    func testCategoryUrl() {
+        categoryViewController?.viewDidLoad()
+        XCTAssert(categoryViewController?.categoryUrl == "URL string") 
+        
     }
 
 }
