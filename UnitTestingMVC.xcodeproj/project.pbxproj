@@ -20,6 +20,7 @@
 		D481156224A71BCD00F07ED1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481156124A71BCD00F07ED1 /* CategoryViewController.swift */; };
 		D481156324A71DF600F07ED1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481156124A71BCD00F07ED1 /* CategoryViewController.swift */; };
 		D481156424A71E8400F07ED1 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481155F24A7190100F07ED1 /* NetworkingManager.swift */; };
+		D481156A24A7212200F07ED1 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = D481156924A7212200F07ED1 /* category.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		D481154F24A7172800F07ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D481155F24A7190100F07ED1 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		D481156124A71BCD00F07ED1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		D481156924A7212200F07ED1 /* category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		D481152724A7172700F07ED1 /* UnitTestingMVC */ = {
 			isa = PBXGroup;
 			children = (
+				D481156624A720ED00F07ED1 /* MockJSONS */,
 				D481155E24A718ED00F07ED1 /* Common */,
 				D481155D24A718DD00F07ED1 /* Networking */,
 				D481155B24A717F500F07ED1 /* Modules */,
@@ -169,6 +172,14 @@
 			children = (
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		D481156624A720ED00F07ED1 /* MockJSONS */ = {
+			isa = PBXGroup;
+			children = (
+				D481156924A7212200F07ED1 /* category.json */,
+			);
+			path = MockJSONS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +289,7 @@
 				D481153824A7172800F07ED1 /* LaunchScreen.storyboard in Resources */,
 				D481153524A7172800F07ED1 /* Assets.xcassets in Resources */,
 				D481153024A7172700F07ED1 /* Main.storyboard in Resources */,
+				D481156A24A7212200F07ED1 /* category.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

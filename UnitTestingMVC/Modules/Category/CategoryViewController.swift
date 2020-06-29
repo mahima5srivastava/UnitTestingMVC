@@ -9,13 +9,7 @@
 import UIKit
 
 class CategoryViewController: UIViewController {
-    
-    //MARK:- Constants
-    
-    struct Constants {
-        static let url = "https://qadosa.decathlon.in/pim/api/v1/categories/category/1001"
-    }
-       
+     
     //MARK:- IBOutlets
    
     //MARK:- Properties
@@ -27,7 +21,8 @@ class CategoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryUrl = Constants.url
+        categoryUrl = getCategoryURL()
+    
        
     }
     
@@ -37,4 +32,8 @@ class CategoryViewController: UIViewController {
         
     }
 
+    func getCategoryURL() -> String {
+        let categoryUrl = ""
+        return categoryUrl
+    }
 }

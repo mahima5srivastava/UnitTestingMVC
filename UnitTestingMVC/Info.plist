@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>ApiJsonMapper</key>
+	<dict/>
+	<key>https://qadosa.decathlon.in/pim/api/v1/categories/category/1001</key>
+	<string>category</string>
+	<key>App URLs</key>
+	<dict>
+		<key>category</key>
+		<string>https://qadosa.decathlon.in/pim/api/v1/categories/category/1001</string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
