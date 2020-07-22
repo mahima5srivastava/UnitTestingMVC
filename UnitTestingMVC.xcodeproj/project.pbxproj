@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D47DBCA724B714F700B14DB0 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47DBCA624B714F700B14DB0 /* Protocols.swift */; };
 		D481152924A7172700F07ED1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481152824A7172700F07ED1 /* AppDelegate.swift */; };
 		D481152B24A7172700F07ED1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481152A24A7172700F07ED1 /* SceneDelegate.swift */; };
 		D481152D24A7172700F07ED1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481152C24A7172700F07ED1 /* ViewController.swift */; };
@@ -21,6 +22,13 @@
 		D481156324A71DF600F07ED1 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481156124A71BCD00F07ED1 /* CategoryViewController.swift */; };
 		D481156424A71E8400F07ED1 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D481155F24A7190100F07ED1 /* NetworkingManager.swift */; };
 		D481156A24A7212200F07ED1 /* category.json in Resources */ = {isa = PBXBuildFile; fileRef = D481156924A7212200F07ED1 /* category.json */; };
+		D482F61024AD86CB0056E1DE /* CategoryTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F60F24AD86CB0056E1DE /* CategoryTableViewDataSource.swift */; };
+		D482F61224AD87460056E1DE /* CategoryTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F61124AD87460056E1DE /* CategoryTableViewDelegate.swift */; };
+		D482F61524AD97820056E1DE /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F61424AD97820056E1DE /* CategoryModel.swift */; };
+		D482F61E24ADA1F90056E1DE /* UnitTestingMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F61D24ADA1F90056E1DE /* UnitTestingMocks.swift */; };
+		D482F62324ADBB3B0056E1DE /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F61424AD97820056E1DE /* CategoryModel.swift */; };
+		D482F62424ADBB650056E1DE /* CategoryTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F60F24AD86CB0056E1DE /* CategoryTableViewDataSource.swift */; };
+		D482F62524ADBB680056E1DE /* CategoryTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D482F61124AD87460056E1DE /* CategoryTableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D47DBCA624B714F700B14DB0 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		D481152524A7172700F07ED1 /* UnitTestingMVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnitTestingMVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D481152824A7172700F07ED1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D481152A24A7172700F07ED1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +68,10 @@
 		D481155F24A7190100F07ED1 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
 		D481156124A71BCD00F07ED1 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		D481156924A7212200F07ED1 /* category.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = category.json; sourceTree = "<group>"; };
+		D482F60F24AD86CB0056E1DE /* CategoryTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewDataSource.swift; sourceTree = "<group>"; };
+		D482F61124AD87460056E1DE /* CategoryTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewDelegate.swift; sourceTree = "<group>"; };
+		D482F61424AD97820056E1DE /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		D482F61D24ADA1F90056E1DE /* UnitTestingMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitTestingMocks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +122,7 @@
 		D481152724A7172700F07ED1 /* UnitTestingMVC */ = {
 			isa = PBXGroup;
 			children = (
+				D482F61324AD973A0056E1DE /* Models */,
 				D481156624A720ED00F07ED1 /* MockJSONS */,
 				D481155E24A718ED00F07ED1 /* Common */,
 				D481155D24A718DD00F07ED1 /* Networking */,
@@ -130,6 +144,7 @@
 			children = (
 				D481154224A7172800F07ED1 /* UnitTestingMVCTests.swift */,
 				D481154424A7172800F07ED1 /* Info.plist */,
+				D482F61D24ADA1F90056E1DE /* UnitTestingMocks.swift */,
 			);
 			path = UnitTestingMVCTests;
 			sourceTree = "<group>";
@@ -147,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				D481155C24A7180400F07ED1 /* Category */,
+				D47DBCA624B714F700B14DB0 /* Protocols.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -155,6 +171,8 @@
 			isa = PBXGroup;
 			children = (
 				D481156124A71BCD00F07ED1 /* CategoryViewController.swift */,
+				D482F60F24AD86CB0056E1DE /* CategoryTableViewDataSource.swift */,
+				D482F61124AD87460056E1DE /* CategoryTableViewDelegate.swift */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -180,6 +198,14 @@
 				D481156924A7212200F07ED1 /* category.json */,
 			);
 			path = MockJSONS;
+			sourceTree = "<group>";
+		};
+		D482F61324AD973A0056E1DE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D482F61424AD97820056E1DE /* CategoryModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,10 +341,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				D481152D24A7172700F07ED1 /* ViewController.swift in Sources */,
+				D482F61024AD86CB0056E1DE /* CategoryTableViewDataSource.swift in Sources */,
 				D481152924A7172700F07ED1 /* AppDelegate.swift in Sources */,
 				D481152B24A7172700F07ED1 /* SceneDelegate.swift in Sources */,
 				D481156024A7190100F07ED1 /* NetworkingManager.swift in Sources */,
+				D47DBCA724B714F700B14DB0 /* Protocols.swift in Sources */,
 				D481156224A71BCD00F07ED1 /* CategoryViewController.swift in Sources */,
+				D482F61224AD87460056E1DE /* CategoryTableViewDelegate.swift in Sources */,
+				D482F61524AD97820056E1DE /* CategoryModel.swift in Sources */,
 				D481153324A7172700F07ED1 /* UnitTestingMVC.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,8 +357,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D482F62424ADBB650056E1DE /* CategoryTableViewDataSource.swift in Sources */,
+				D482F61E24ADA1F90056E1DE /* UnitTestingMocks.swift in Sources */,
 				D481156424A71E8400F07ED1 /* NetworkingManager.swift in Sources */,
 				D481156324A71DF600F07ED1 /* CategoryViewController.swift in Sources */,
+				D482F62524ADBB680056E1DE /* CategoryTableViewDelegate.swift in Sources */,
+				D482F62324ADBB3B0056E1DE /* CategoryModel.swift in Sources */,
 				D481154324A7172800F07ED1 /* UnitTestingMVCTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

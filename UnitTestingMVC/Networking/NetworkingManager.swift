@@ -8,24 +8,29 @@
 
 import Foundation
 
-
-
-protocol NetworkingProtocol {
-    func getData(from url: String, completion: () -> ([String: Any]))
-}
-
 //MARK:- This class is responsible for interating with APIs
 
-class NetworkingManager: NetworkingProtocol {
-    func getData(from url: String, completion: () -> ([String : Any])) {
-        
+struct NetworkingManager: NetworkingProtocol {
+    
+    //MARK:- Properties
+    
+    weak var categoryDelegate: CategoryResponseProtocol?
+
+    //MARK:- Properties
+    
+    func getData(from urlString: String) {
+        guard let url = URL(string: urlString) else {return}
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { return }
+            do {
+                let jsonData = try JSONDecoder().decode(CategoryModel.self, from: data)
+                self.categoryDelegate?.handleCategoryData(jsonData)
+                
+            } catch {
+                self.categoryDelegate?.handleCategoryError(error)
+            }
+        }.resume()
     }
     
 }
 
-//MARK:- This class is for mocing Networking Manager. It also conforms to the same Networking protocol. However, it will get data from local JSONs
-class MockManager: NetworkingProtocol {
-    func getData(from url: String, completion: () -> ([String : Any])) {
-        
-    }
-}

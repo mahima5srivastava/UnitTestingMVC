@@ -7,13 +7,35 @@
 //
 
 import XCTest
+
 @testable import UnitTestingMVC
 
 class UnitTestingMVCTests: XCTestCase {
-    var categoryViewController: CategoryViewController?
     
+    //MARK:- Properties
+    var categoryViewControllerStub: CategoryViewControllerStub?
+    var categoryViewController: CategoryViewController?
+    var isDataReceived = false
+    var tableView = UITableView()
+    var tableViewDataSource = CategorgyTableViewDataSource()
+    var tableViewDelegate = CategoryTableViewDelegate()
+    
+    //MARK:- Methods
     override func setUpWithError() throws {
-      categoryViewController = CategoryViewController()
+        
+        tableView.delegate = tableViewDelegate
+        tableView.dataSource = tableViewDataSource
+        
+        categoryViewControllerStub = CategoryViewControllerStub()
+        categoryViewControllerStub?.networkingManager = MockNetworkingManager()
+        categoryViewControllerStub?.tableView = tableView
+        categoryViewControllerStub?.viewDidLoad()
+        
+        
+        categoryViewController = CategoryViewController()
+        categoryViewController?.tableView = tableView
+        categoryViewController?.networkingManager = MockNetworkingManager()
+        categoryViewController?.viewDidLoad()
     }
 
     override func tearDownWithError() throws {
@@ -33,9 +55,20 @@ class UnitTestingMVCTests: XCTestCase {
     }
     
     func testCategoryUrl() {
-        categoryViewController?.viewDidLoad()
-        XCTAssert(categoryViewController?.categoryUrl == "URL string") 
-        
+        XCTAssert(categoryViewControllerStub?.categoryUrl == "https://qadosa.decathlon.in/pim/api/v1/categories/category/1001")
+    }
+    
+    func testDataParsing() {
+        XCTAssert(categoryViewControllerStub?.isDataReceived == true)
     }
 
+    func testHandleError() {
+        XCTAssert(categoryViewController?.errorValue == 200)//change it to 2000 after adding stub for this
+    }
+    
+    func testHandleData() {
+        XCTAssert(categoryViewController?.dataValue == 1000)
+    }
+    
 }
+
